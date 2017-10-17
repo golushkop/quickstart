@@ -1,6 +1,8 @@
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
+.idea
+node_modules
 
 # Folder config file
 Desktop.ini
@@ -45,3 +47,7 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+Будет удалено __MACOSX/
+Будет удалено invoices.sqlite
+Будет удалено node_modules/
+Будет удалено package-lock.json

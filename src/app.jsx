@@ -1,6 +1,14 @@
 import React from 'react';
-import { render } from 'react-dom';
+import ReactDom from 'react-dom';
+import Components from './components/components';
 
 import 'react-select/dist/react-select.css';
+// import '../public/bootstrap/css/bootstrap-theme.css';
+// import '../public/bootstrap/css/bootstrap.css';
 
-render(<div>Place your application here</div>, document.getElementById('app-root'));
+ReactDom.render((
+    <div>
+        <Components/>
+    </div>
+),
+    document.getElementById('app-root'));
