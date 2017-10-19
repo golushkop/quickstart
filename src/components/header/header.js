@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import {Navbar, Nav, NavItem} from 'react-bootstrap';
-import {Link, NavLink} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import sitePaths from '../../models/paths';
-// import {LinkContainer} from 'react-router-bootstrap'
-// import from 'reac'
+import {LinkContainer} from 'react-router-bootstrap'
 
 class Header extends Component {
+
     render () {
         return (
             <div className="app-header">
@@ -14,9 +14,15 @@ class Header extends Component {
                         <Navbar.Brand><Link to="/">Invoice App</Link></Navbar.Brand>
                     </Navbar.Header>
                     <Nav>
-                        <NavItem><NavLink to={sitePaths.invoice} activeClassName="active">Invoices</NavLink></NavItem>
-                        <NavItem><NavLink to={sitePaths.products} activeClassName="active">Products</NavLink></NavItem>
-                        <NavItem><NavLink to={sitePaths.customers} activeClassName="active">Customers</NavLink></NavItem>
+                        <LinkContainer to={sitePaths.invoice}>
+                            <NavItem eventKey={1}>Invoices</NavItem>
+                        </LinkContainer>
+                        <LinkContainer to={sitePaths.products}>
+                            <NavItem eventKey={2}>Products</NavItem>
+                        </LinkContainer>
+                        <LinkContainer to={sitePaths.customers}>
+                            <NavItem eventKey={3}>Customers</NavItem>
+                        </LinkContainer>
                     </Nav>
                 </Navbar>
             </div>
