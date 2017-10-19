@@ -2,8 +2,8 @@
  * Created by golushko.p on 29.09.2017.
  */
 import {combineReducers} from 'redux';
-import cryptoReducer from './crypto-reducer';
+import reducer from './reducer';
 const reducers = combineReducers({
-    cryptoReducer
+    reducer
 });
 export default reducers;
