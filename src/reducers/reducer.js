@@ -4,14 +4,34 @@
 import actionTypes from '../models/action_types';
 
 const initialState = {
-    'allCustomers': []
+    'allCustomers': [],
+    'allProducts': []
 };
 const cryptoReducer  = function (state = initialState, action) {
     let newState = state;
 
     switch (action.type) {
         case actionTypes.addCustomersList:
-            newState.allCustomers = action['customers'];
+            newState.allCustomers.push(action['customer']);
+            return newState;
+        case actionTypes.deleteCustomer:
+            newState.allCustomers = newState.allCustomers.filter(x => {
+                return x.id!==action.id
+            });
+            return newState;
+        case actionTypes.addProduct:
+            newState.allProducts.push(action['product']);
+            return newState;
+        case actionTypes.deleteProduct:
+            newState.allProducts = newState.allProducts.filter(x => {
+                return x.id!==action.id
+            });
+            return newState;
+        case actionTypes.clearStore:
+            newState = {
+                allProducts: [],
+                allCustomers: []
+            };
             return newState;
         default:
             return newState;

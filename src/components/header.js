@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Navbar, Nav, NavItem} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
-import sitePaths from '../../models/paths';
+import sitePaths from '../models/paths';
 import {LinkContainer} from 'react-router-bootstrap'
 
 class Header extends Component {
